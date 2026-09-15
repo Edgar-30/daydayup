@@ -1,0 +1,6 @@
+order_id,customer,amount,city
+1001,Alice,29,Suzhou
+1002,Bob,,Suzhou
+1003,,49,Shanghai
+1001,Alice,29,Suzhou
+1004,Chen,19,
