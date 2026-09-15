@@ -18,18 +18,21 @@
 - CSV 行列、缺失与重复统计，JSON 输出，输入与输出保护：datacheck/。
 - 正常／异常与 CLI 集成测试：tests/。
 - 本地 Python 3.12.11：`python -m unittest discover -s tests -v`，17 项测试通过，退出码 0。
+- 实际运行 `python -m datacheck examples/orders.csv`：退出码 0，5 行、4 列、3 缺失、1 重复，重复编号 [5]。
 - 修复首轮检查发现的空白行处理；测试子进程使用 UTF-8 避免 Windows 中文路径错误信息解码失败。
 - README、8 周路线图、第一周任务、每日提示词、交作业流程与账号展示草案已准备。
 - 已配置 GitHub Actions；远端运行结果待核验。
 
 ## 交付状态
 
-- 文件已实现；本地提交与推送状态将在发布核验后记录到当天记录。
-- 远端已通过 OpenSSL 只读查询，查询成功且未返回任何分支／标签。
+- 首版实现已本地提交并推送到 GitHub main：[06671c5](https://github.com/Edgar-30/daydayup/commit/06671c5129efdd0dfa9f632e2942b09b3ade0e08)。
+- 推送后 `git ls-remote` 已核对远端 main 与本地完整哈希一致：`06671c5129efdd0dfa9f632e2942b09b3ade0e08`。
+- 本地暂存区空白检查通过。个人主页／精选仓库尚未修改；账号文案仍为草案。
 
 ## 未解决问题
 
-- 默认 Git Windows TLS 后端连接 GitHub 失败；本次只读查询改用 OpenSSL 后成功，不关闭证书验证。
+- 默认 Git Windows TLS 后端连接 GitHub 失败；本次查询和推送使用 `git -c http.sslBackend=openssl ...` 成功，不关闭证书验证、不修改全局配置。
+- GitHub Actions API 查询未获得可用结果，远端 CI 仍未验证；可在仓库 Actions 页面查看。
 - 当前 Python 无 pip；首版不需要依赖，进入 API 阶段前需要准备可安装依赖的环境。
 - 尚无性能基准、HTTP 服务、数据库或生产级资源限制。
 - 用户亲自验证结果和理解回答尚未提交；不能判为用户已掌握。
