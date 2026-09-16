@@ -66,10 +66,12 @@ python -m datacheck examples/orders.csv --output report.json
 | [datacheck/__main__.py](datacheck/__main__.py) | 命令行、文件读写和错误出口 |
 | [tests](tests) | 统计边界与真实命令行进程测试 |
 | [8 周路线图](docs/ROADMAP.md) | 阶段目标和第一周安排 |
-| [今日任务与独立提示词](docs/DAY_01.md) | 1 小时阅读、验证与练习 |
+| [当前任务与独立提示词](docs/DAY_02.md) | 第 2 天：首版验收、演示与代码阅读 |
+| [三种场景演示包](examples/review/README.md) | 正常数据、仅表头、错误列数的命令和预期 |
+| [首日任务](docs/DAY_01.md) | CLI 最小版本与首日独立提示词 |
 | [项目进度摘要](docs/PROGRESS.md) | 已验证事实、阻碍、下一步 |
 | [每日流程与交作业模板](docs/WORKFLOW.md) | 验收、复盘和提交规则 |
-| [开发记录](docs/daily/2026-09-15.md) | 首日实现和已知限制 |
+| [开发记录](docs/daily) | 每日真实进展、证据与限制 |
 | [账号展示草案](docs/PROFILE_DRAFT.md) | 可复用的真实个人简介 |
 
 ## 工程验证
